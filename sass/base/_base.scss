@@ -1,0 +1,47 @@
+*, 
+:after,
+:before {
+   box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    @extend %font-prim;
+    color: $color-brand;
+}
+
+h1, h2, h3, h4, h5, h6, 
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    @include font(100px, 132px, 0.09em, uppercase);
+}
+
+h2 {
+    @include font(30px, 33px, 0.06em, uppercase);
+}
+
+h3 {
+    @include font(20px, 22px, 0.09em, uppercase);
+}
+
+h4 {
+    @include font(16px, 27px, 0.01em, uppercase);
+}
+
+p {
+    @include font(14px, 24px, none, normal);
+}
+

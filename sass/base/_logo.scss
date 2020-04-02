@@ -1,0 +1,23 @@
+.logo__image {
+    &:after, 
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 1px;
+        width: 46px;
+        background: $color-brand;
+        position: relative;
+        bottom: 10px;
+    }
+    &:before {  
+        margin-right: 7px;
+    }
+    &:after {
+        margin-left: 7px;
+    }
+}
+
+.logo__title {
+    text-align: center;
+}

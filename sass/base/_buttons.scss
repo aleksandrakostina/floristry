@@ -1,0 +1,27 @@
+.button {
+    padding: 15px 24px;
+    @include font(12px, 13px, 0.15em, uppercase);
+    color: $color-brand;
+    cursor: pointer;
+    &:hover {
+        @extend %transition;
+    }
+} 
+
+.header__btn {
+    border: 1px solid $color-brand;
+    background: $color-button-opacity;
+    &:hover {
+        background: $color-brand;
+        color: $color-button;
+    }
+}
+
+.btn {
+    background: $color-button;    
+    border: none;
+    &:hover {
+        background: $color-brand;
+        color: $color-text-hover;
+    }
+}

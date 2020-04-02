@@ -1,0 +1,23 @@
+.footer {
+    background: $color-background;
+}
+
+.footer__inner {
+    border-top: 1px solid $color-border;
+}
+
+.nav {
+    @extend %flex-space-between;
+    margin-bottom: 20px;
+    @include font(16px, 18px, 0.02em, none);
+    color: $color-text-opacity;
+}
+
+.nav__item {
+    &:hover {
+        color: $color-brand;
+        cursor: pointer;
+        @extend %transition;
+    }
+}
+

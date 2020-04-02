@@ -1,0 +1,35 @@
+.discount {
+    background: $color-background;
+}
+
+.discount__inner {
+    @extend %flex-space-between;
+}
+
+.discount__content {
+    margin-right: 40px;
+    width: 35%;
+}
+
+.discount__img {
+    align-self: center;
+    width: 55%;
+}
+
+.discount__text {
+    margin-bottom: 40px;
+}
+
+.discount__text__title:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 70px;
+    background: $color-brand;
+    margin: 22px 0;
+}
+
+.discount__wrapper img {
+    width: 100%;
+    height: auto;
+}
