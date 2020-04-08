@@ -1,0 +1,41 @@
+.menu-block {
+    display: none;
+    background: $color-background;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+}
+
+.menu_logo {
+    margin: 0 auto 70px;
+}
+
+.nav__menu {
+    text-align: center;
+    @include font(3.1rem, 4rem, 0.09em, uppercase);
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 400px;
+    margin: auto;
+}
+
+.nav__menu__item {
+    margin-bottom: 20px;
+}
+
+.nav__menu__item:after {
+    display:block;
+    content: '';
+    height: 5px;
+    width: 100%;
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+    margin-bottom:-1px;
+}
+
+.nav__menu__item:hover {
+    @include font(3.5rem, 4rem, 0.09em, uppercase);
+    color: #FFFFFF;
+    @extend %transition;
+}

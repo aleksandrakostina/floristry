@@ -3,14 +3,19 @@
 }
 
 .catalog__title {
+    margin-top: 10px;
     text-align: center;
+    user-select: none;  
     &:after {
         content: '';
         display: block;
         height: 1px;
         width: 70px;
         background: $color-brand;
-        margin: 22px auto;
+        margin: 22px auto 40px;
+    }
+    @include media-tablet {
+        margin-top: 55px;
     }
 }
 
@@ -22,13 +27,26 @@
 
 .catalog__img__item {
     position: relative;
-    width: 23%;
+    width: 24%;
     padding: 3px; 
     border: 1px solid transparent;
     &:hover {
         border: 1px solid $color-border;
         @extend %transition;
     }
+    @include media-tablet {
+        width: 48%;
+        &:nth-child(n+3){
+            display: none;
+        }
+    }
+    @include media-mobile-middle {
+        width: 100%;
+        &:nth-child(n+2){
+            display: none;
+        }
+    }
+
 }
 
 .catalog__img__item img {
@@ -42,7 +60,12 @@
     bottom: 20px;
     left: 10px;
     max-width: 230px;
-    @include font(18px, 20px, 0.02em, none);
+    @include font(1.8rem, 2rem, 0.02em, none);
+    user-select: none;
+    @include media-mobile-big {
+        @include font(1.5rem, 1.7rem, 0.02em, none);
+        max-width: 170px;
+    }  
 }
 
 .catalog__number {
@@ -50,6 +73,7 @@
     top: 10px;
     left: 10px;
     font-size: 20px;
+    user-select: none;  
     &:before {
         content: '';
         display: inline-block;
@@ -58,5 +82,43 @@
         width: 60px;
         background: $color-brand;
         margin-right: 10px;
+    }
+}
+
+.control {
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.control__point {
+    display: none;
+    justify-content: center;
+    margin-right: 10px;
+    height: 3px;
+    width: 62px;
+    background:  rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &_active {
+        background: $color-brand;
+    }
+    @include media-tablet {
+        display: inline-block;
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+        &:nth-child(n+3){
+            display: none;  
+        }
+    }
+    @include media-mobile-small {
+        &:nth-child(2) {
+            margin-right: 10px;
+        }
+        &:nth-child(n+3){
+            display: inline-block;     
+        }
     }
 }

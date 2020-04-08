@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="wrapper">
+        <div class="wrapper wrapper__header">
             <div class="header__top">
                 <div class="logo">
                     <div class="logo__image"><img src="images/Group.png"></div>
@@ -22,7 +22,6 @@
                     <h3>Меню</h3>
                 </div>
             </div>
-
             <div class="header__center">
                 <h1 class="header__title">Флористика с душой</h1>
                 <button class="button header__btn">Смотреть работы</button>
@@ -45,9 +44,43 @@
                 </div>
             </div>
         </div>
-        <div class="gradient"></div>
     </header>
 
+    <div class="modal-window-opacity">
+        <div class="modal-window">
+            <img src="images/modal.png">
+            <div class="forms">
+                <h3>Оставьте свой номер и мы вам перезвоним</h3>
+                <form class="form" action="#" method="POST" name="contacts">
+                    <div class="form__item">
+                        <input class="input" type='text' name="name" placeholder="Имя">
+                    </div> 
+                    <div class="form__item">
+                        <input class="input" type='tel' name="tel" placeholder="Телефон">
+                    </div> 
+                    <div class="form__item">
+                        <input class="submit" type='submit' name="submit" value="Позвоните мне">
+                    </div> 
+                </form>
+            </div>
+            <div class="cross"></div>
+        </div> 
+    </div>
+
+    <div class="menu-block">
+        <div class="logo menu_logo">
+            <div class="logo__image"><img src="images/Group.png"></div>
+            <h3 class="logo__title">Весна всегда</h3>
+        </div>
+        <ul class="nav__menu">
+            <li class="nav__menu__item">Cвадебная флористика</li>
+            <li class="nav__menu__item">Букеты на любые мероприятия</li>
+            <li class="nav__menu__item">Букеты невесты</li>
+            <li class="nav__menu__item">Композиции</li>
+            <li class="nav__menu__item">Оформление мероприятий</li>
+        </ul>
+    </div>
+    
     <section class="catalog">
         <div class="wrapper">
             <h2 class="catalog__title">Каталог услуг</h2>
@@ -76,12 +109,19 @@
                     <div class="catalog__name">Оформление мероприятий</div>
                     <!--<button class="catalog__btn">Смотреть работы</button>-->
                 </div>
+                
+            </div>
+            <div class="catalog__control control">
+                <span class="control__point control__point_active"></span>
+                <span class="control__point"></span>
+                <span class="control__point"></span>
+                <span class="control__point"></span>
             </div>
         </div>
     </section>
 
     <section class="discount">
-        <div class="discount__wrapper discount__inner">
+        <div class="wrapper__discount discount__inner">
             <div class="discount__content">
                 <div class="discount__text">
                     <h2 class="discount__text__title">Акционные предложения</h2>
@@ -97,7 +137,7 @@
     </section>
 
     <footer class="footer">
-        <div class="footer__wrapper footer__inner">
+        <div class="wrapper__footer">
             <ul class="nav">
                 <li class="nav__item">Cвадебная флористика</li>
                 <li class="nav__item">Букеты на любые мероприятия</li>

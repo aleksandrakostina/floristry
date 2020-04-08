@@ -26,22 +26,46 @@ ul {
 }
 
 h1 {
-    @include font(100px, 132px, 0.09em, uppercase);
+    @include font(10rem, 13.2rem, 0.09em, uppercase);
+    @include media-tablet {
+        @include font(6rem, 7rem, 0.09em, uppercase);
+    }
+    @include media-mobile-big {
+        @include font(5rem, 6rem, 0.09em, uppercase);
+    }
+    @include media-mobile-middle {
+        @include font(4rem, 5rem, 0.09em, uppercase);
+    }
+    @include media-mobile-small {
+        @include font(3rem, 4.2rem, 0.09em, uppercase);
+    }
 }
 
 h2 {
-    @include font(30px, 33px, 0.06em, uppercase);
+    @include font(3rem, 3.3rem, 0.06em, uppercase);
+    @include media-mobile-big {
+        @include font(2.4rem, 3.3rem, 0.06em, uppercase);
+    }
+    @include media-mobile-small {
+        @include font(2rem, 3.3rem, 0.06em, uppercase);
+    }
 }
 
 h3 {
-    @include font(20px, 22px, 0.09em, uppercase);
+    @include font(2rem, 2.2rem, 0.06em, uppercase);
+    @include media-mobile-big {
+        @include font(1.7rem, 1.8rem, 0.06em, uppercase);
+    }
+    @include media-mobile-small {
+        @include font(1.2rem, 1.3rem, 0.06em, uppercase);
+    }
 }
 
 h4 {
-    @include font(16px, 27px, 0.01em, uppercase);
+    @include font(1.6rem, 2.7rem, 0.01em, uppercase);
 }
 
 p {
-    @include font(14px, 24px, none, normal);
+    @include font(1.4rem, 2.4rem, none, normal);
 }
 

@@ -4,20 +4,39 @@
 
 .discount__inner {
     @extend %flex-space-between;
+    flex-wrap: wrap;
+    @include media-tablet {
+        flex-direction: column-reverse;
+    }
 }
 
 .discount__content {
     margin-right: 40px;
     width: 35%;
+    @include media-tablet {
+        width: 95%;
+        text-align: center;
+        margin-right: 0;
+    }
+    @include media-mobile-small {
+        text-align: left;
+    }
 }
 
 .discount__img {
     align-self: center;
     width: 55%;
+    @include media-tablet {
+        margin-bottom: 30px;
+        width: 100%;
+    }
 }
 
 .discount__text {
     margin-bottom: 40px;
+    @include media-tablet {
+        margin-bottom: 25px;
+    }
 }
 
 .discount__text__title:after {
@@ -27,9 +46,15 @@
     width: 70px;
     background: $color-brand;
     margin: 22px 0;
+    @include media-tablet {
+        margin: 22px auto;
+    }
+    @include media-mobile-small {
+        margin: 22px 0;
+    }
 }
 
-.discount__wrapper img {
+.wrapper__discount img {
     width: 100%;
     height: auto;
 }

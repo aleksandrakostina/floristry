@@ -2,22 +2,40 @@
     background: $color-background;
 }
 
-.footer__inner {
+/*.footer__inner {
     border-top: 1px solid $color-border;
-}
+}*/
 
 .nav {
     @extend %flex-space-between;
     margin-bottom: 20px;
     @include font(16px, 18px, 0.02em, none);
     color: $color-text-opacity;
+    text-align: center;
+    border-top: 1px solid $color-text-opacity;
+    padding: 20px 40px;
+    @include media-tablet {
+        display: block;
+    }
 }
 
 .nav__item {
+    //text-align: center;
+    //flex: 1;
+    @include media-tablet {
+        margin-bottom: 20px;
+        text-align: center;
+        &:last-child {
+            margin-bottom: 40px;
+        }
+    }  
     &:hover {
         color: $color-brand;
         cursor: pointer;
         @extend %transition;
+    }
+    @include media-mobile-big {
+        margin-bottom: 15px;
     }
 }
 

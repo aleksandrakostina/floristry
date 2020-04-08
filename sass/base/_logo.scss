@@ -1,4 +1,10 @@
+
+.logo {
+    max-width: 145px;
+}
 .logo__image {
+    max-width: 140px;
+    margin: auto;
     &:after, 
     &:before {
         content: '';
@@ -16,8 +22,28 @@
     &:after {
         margin-left: 7px;
     }
+    & img {
+        @include media-mobile-small {
+            width: 23px;
+        }
+    }
+    @include media-mobile-big {
+        &:after, 
+        &:before {
+            width: 36px;
+            bottom: 11px;
+        }
+    }
+    @include media-mobile-small {
+        &:after, 
+        &:before {
+            width: 26px;
+            bottom: 7px;
+        }
+    }
 }
 
 .logo__title {
     text-align: center;
+    user-select: none;  
 }
